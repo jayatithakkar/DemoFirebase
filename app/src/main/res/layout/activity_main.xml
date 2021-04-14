@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/background"
+tools:context=".MainActivity">
+<!--<ScrollView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<TextView
+    android:id="@+id/tv_welcome2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Welcome!"
+    android:textColor="@color/dark"
+    android:textSize="30sp"
+    android:fontFamily="sans-serif-light"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp" />
+
+<TextView
+    android:id="@+id/tv_create"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_welcome2"
+    android:layout_alignStart="@id/tv_welcome2"
+    android:fontFamily="sans-serif-light"
+    android:text="Create New Account!"
+    android:textColor="@color/dark"
+    android:textSize="40sp" />
+
+<com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:neomorph_view_type="rectangular"
+    app:neomorph_shadow_type="outer"
+    app:neomorph_elevation="6dp"
+    app:neomorph_corner_radius="10dp"
+    app:neomorph_background_color="@color/background"
+    app:neomorph_shadow_color="@color/shadow_color"
+    app:neomorph_highlight_color="@color/highlight"
+    android:layout_above="@+id/semail">
+
+    <EditText
+        android:id="@+id/su_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_rectangle"
+        android:hint="Full Name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+</com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+<com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+    android:id="@+id/semail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:neomorph_view_type="rectangular"
+    app:neomorph_shadow_type="outer"
+    app:neomorph_elevation="6dp"
+    app:neomorph_corner_radius="10dp"
+    app:neomorph_background_color="@color/background"
+    app:neomorph_shadow_color="@color/shadow_color"
+    app:neomorph_highlight_color="@color/highlight"
+    android:layout_above="@+id/layout_pass">
+
+    <EditText
+        android:id="@+id/et_mail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_rectangle"
+        android:hint="Email"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+</com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+<com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+    android:id="@+id/layout_pass"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:neomorph_view_type="rectangular"
+    app:neomorph_shadow_type="outer"
+    app:neomorph_elevation="6dp"
+    app:neomorph_corner_radius="10dp"
+    app:neomorph_background_color="@color/background"
+    app:neomorph_shadow_color="@color/shadow_color"
+    app:neomorph_highlight_color="@color/highlight"
+    android:layout_centerInParent="true">
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_rectangle"
+        android:hint="Country Name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        />
+
+</com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+<com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+    android:id="@+id/ctnum"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:neomorph_view_type="rectangular"
+    app:neomorph_shadow_type="outer"
+    app:neomorph_elevation="6dp"
+    app:neomorph_corner_radius="10dp"
+    app:neomorph_background_color="@color/background"
+    app:neomorph_shadow_color="@color/shadow_color"
+    app:neomorph_highlight_color="@color/highlight"
+    android:layout_below="@+id/layout_pass">
+
+    <EditText
+        android:id="@+id/et_num"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_rectangle"
+        android:hint="Contact Number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+</com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+<RadioGroup
+    android:id="@+id/gndr"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:layout_below="@id/ctnum">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender: "
+        android:layout_marginLeft="18dp"
+        android:textSize="20sp"/>
+
+    <RadioButton
+        android:id="@+id/male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"/>
+
+    <RadioButton
+        android:id="@+id/female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"/>
+
+    <RadioButton
+        android:id="@+id/radio_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"/>
+</RadioGroup>
+
+
+<com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+    android:id="@+id/layout_signup_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:neomorph_view_type="rectangular"
+    app:neomorph_shadow_type="outer"
+    app:neomorph_elevation="6dp"
+    app:neomorph_corner_radius="10dp"
+    app:neomorph_background_color="@color/background"
+    app:neomorph_shadow_color="@color/shadow_color"
+    app:neomorph_highlight_color="@color/highlight"
+    android:layout_below="@+id/gndr"
+    android:layout_marginTop="20dp"
+    android:layout_centerHorizontal="true">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:text="Save and Show Data"
+        android:textColor="@color/highlight"/>
+
+</com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+
+
+
+<!--</ScrollView>-->
+</RelativeLayout>
